@@ -1,0 +1,34 @@
+Unittest exercise:
+
+The following test cases will be implemented in a single class with
+unittest library
+
+Class: Implement a LoginTests class to inherit from unittest.TestCase
+
+- Add setUp() method with driver instantiation, window maximization and navigation to
+page https://the-internet.herokuapp.com/login
+
+- Adds tearDown() method that will close the driver
+
+Test Cases - each point below will be implemented as a separate test method:
+1. Validate that the url of the current page is https://the-internet.herokuapp.com/login
+
+2. Validate that the page title is "The Internet"
+
+3. Validate that the text on the element with xpath = "//h2" is "Login Page"
+
+4. Leave username and password empty, then click login.
+Validate that the error message with id = "flash" is displayed.
+Validate that the text on the element contains the string "Your username is invalid!"
+
+5. Enter the correct username and password (found on the page), then click login.
+Validate that the success message with class name = "success" is displayed.
+Validate that the text on the element contains the string "You logged into a secure area!"
+
+6. Test that the login error when entering the wrong data closes on click
+  # Leave user and password empty
+  # Click the login button
+  # Verify that the error appears
+  # Click the x button to clear the error
+  # Verify that the error is gone
+    
